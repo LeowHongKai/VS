@@ -35,11 +35,12 @@
                     @endif
                 </div>
             @endif
+
             <div>
-            Address:Southern Cart<br>
-                Phone:01111-481639<br>
-                Email:info@Southern.com
+                Address:Southern Cart <br>
+                Phone: 07-5585555<br>
+                Email: info@southerncart.com
             </div>
-            
+        </div>
     </body>
 </html>

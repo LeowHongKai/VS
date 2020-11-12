@@ -35,10 +35,34 @@
                     @endif
                 </div>
             @endif
-            <div>
-            <a class="nav-link" href="{{url('/home')}}">​
-            <img src="{{asset('image/Umbrella.jpg')}}" alts="">
-            </div>
+
             
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="{{ asset('image/promotion_03.jpg')}}" alt="" class="img-fluid" width=100%  > 
+                    </div>                    
+                </div>                        
+
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <img src="{{ asset('image/samsungPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
+                        <p>SAMSUNG</p>
+                    </div>
+                    <div class="col-sm-4" style="text-align: center">
+                        <img src="{{ asset('image/xiaomiPhone.jpg')}}" width=50% alt="" class="img-fluid"> 
+                        <p>XIAOMI</p>           
+                    </div>
+                    <div class="col-sm-4" style="text-align: center" >
+                        <img src="{{ asset('image/vivoPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
+                        <p>VIVO</p>
+                    </div>                
+                </div>
+                    
+            </div>
+
+            
+        </div>
     </body>
 </html>
