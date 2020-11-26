@@ -1,6 +1,11 @@
 
 @extends('layouts.app')
 @section('content') 
+@if(Session::has('success'))           
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('success')}}
+        </div>       
+@endif 
     
 
 <div class="container">
@@ -32,9 +37,8 @@
                         <td>{{$product->quantity}}</td>
                         <td>{{$product->price}}</td>
 		                <td>
-		                    <a href="#" class="btn btn-warning"><i class="fas fa-edit">Edit</i></a> | 
-		                    <a href="#" 
-                            class="btn btn-danger" onclick="return confirm('Sure Want Delete?')">Delete</a>
+		                    <a href="{{route('editproduct', ['id' => $product->id])}}" class="btn btn-warning"><i class="fas fa-edit">Edit</i></a> | 
+		                    <a href="{{ route('deleteProduct', ['id' => $product->id]) }}" class="btn btn-danger" onclick="return confirm('Sure Want Delete?')">Delete</a>
 		                </td>
 		            </tr> 
                 @endforeach
