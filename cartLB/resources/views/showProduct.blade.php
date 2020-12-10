@@ -38,7 +38,8 @@
                         <td>{{$product->price}}</td>
 		                <td>
 		                    <a href="{{route('editproduct', ['id' => $product->id])}}" class="btn btn-warning"><i class="fas fa-edit">Edit</i></a> | 
-		                    <a href="{{ route('deleteProduct', ['id' => $product->id]) }}" class="btn btn-danger" onclick="return confirm('Sure Want Delete?')">Delete</a>
+		                    <a href="{{ route('deleteProduct', ['id' => $product->id]) }}" 
+ class="btn btn-danger" onclick="return confirm('Sure Want Delete?')">Delete</a>
 		                </td>
 		            </tr> 
                 @endforeach
@@ -48,7 +49,7 @@
 		    </table>
 		
 		<div class="text-center">
-			
+			{{ $products->links() }}
         </div>
 
 	</div>

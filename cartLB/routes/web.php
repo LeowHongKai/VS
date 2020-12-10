@@ -48,6 +48,17 @@ Route::get('/deleteProduct/{id}', [App\Http\Controllers\ProductController::class
 
 Route::post('/updateproduct', [App\Http\Controllers\ProductController::class, 'update'])->name('updateproduct');
 
+Route::post('/searchProduct', [App\Http\Controllers\ProductController::class, 'search'])->name('search.product');
+
+Route::get('/userShowProduct', [App\Http\Controllers\userShowProductController::class, 'show'])->name('showProduct');
+
+Route::post('/searchProduct', [App\Http\Controllers\userShowProductController::class, 'search'])->name('userSearch.product');
+
+Route::get('/product_detail/{id}', [App\Http\Controllers\ProductController::class, 'showProductDetail'])->name('product.detail');
+
+Route::post('/addToCart', [App\Http\Controllers\CartController::class, 'add'])->name('add.to.cart');
+
+Route::get('/myCart', [App\Http\Controllers\CartController::class, 'show'])->name('my.cart');
 
 Auth::routes();
 
